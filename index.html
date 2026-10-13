@@ -152,6 +152,62 @@
             margin-top: 5px;
         }
 
+        /* SECCIÓN SOBRE MÍ / BRAND OVERVIEW (ESTILO INFOGRAFÍA) */
+        .about-overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .about-overview-grid { grid-template-columns: 1fr; }
+        }
+
+        .about-card {
+            background: var(--blanco-puro);
+            border: 1px solid var(--gris-borde);
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .about-card h3 {
+            font-size: 1.5rem;
+            color: var(--vinotinto);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--vinotinto);
+            padding-bottom: 10px;
+        }
+
+        .about-card p {
+            font-size: 0.98rem;
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .about-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .about-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--vinotinto);
+            font-size: 0.8rem;
+        }
+
         /* MARCAS INTERACTIVAS */
         .brands-grid {
             display: grid;
@@ -838,7 +894,7 @@
     <header class="hero-slide" id="main-hero">
         <span class="hero-badge">Community Management & Digital Portfolio</span>
         <h1 class="hero-title serif-title">Michelle Pulido</h1>
-        <p class="hero-subtitle">Community Manager & Trade Marketing Specialist | Estrategias de contenido, copywriting de respuesta directa y crecimiento orgánico para marcas líderes en Latam.</p>
+        <p class="hero-subtitle">Community Management & Trade Marketing Specialist | Estrategias de contenido, copywriting de respuesta directa y crecimiento orgánico para marcas líderes en Latam.</p>
         
         <div class="arch-frame-container">
             <img src="foto-michelle.jpg" alt="Michelle Pulido" class="arch-frame-img" onerror="this.style.display='none'">
@@ -849,6 +905,32 @@
 
         <!-- ================= VISTA PRINCIPAL ================= -->
         <div id="main-content">
+
+            <!-- SOBRE MÍ / BRAND OVERVIEW (NUEVA SECCIÓN) -->
+            <section>
+                <div class="section-header">
+                    <p>Perfil Profesional & Trayectoria</p>
+                    <h2 class="serif-title">Sobre Mí / Brand Overview</h2>
+                </div>
+
+                <div class="about-overview-grid">
+                    <div class="about-card">
+                        <h3 class="serif-title">Ariadnys Michelle Pulido Urdaneta</h3>
+                        <p>Especialista en Community Management y Trade Marketing enfocada en conectar la estética visual con la conversión comercial para marcas de retail y dermocosmética.</p>
+                        <p>Combino una sólida base teórica con la ejecución directa en el mercado actual, aplicando estrategias de respuesta inmediata y curaduría de contenido orientada a resultados medibles.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <h3 class="serif-title">Formación & Actualización Continua</h3>
+                        <p>En constante evolución profesional mediante educación especializada y actualización en tendencias digitales:</p>
+                        <ul class="about-list">
+                            <li>Cursando últimos semestres de la carrera de <strong>Mercadotecnia</strong> en modalidad remota.</li>
+                            <li><strong>Diplomado en Community Manager</strong> con enfoque en estrategias de crecimiento orgánico y pauta.</li>
+                            <li>Capacitación especializada dominical en <strong>Diseño Gráfico para Redes Sociales</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
             <!-- MARCAS Y PARTNERS -->
             <section>
@@ -912,53 +994,45 @@
 
                 <div class="feeds-container-grid">
                     
+                    <!-- MESOESTETIC -->
                     <div class="feed-card">
-                        <div class="feed-mini-grid">
-                            <div class="feed-mini-item"><img src="foto-michelle.jpg" alt="Mesoestetic" onerror="this.style.display='none'"></div>
-                            <div class="feed-mini-item" style="background:#8C1C35;"></div>
-                            <div class="feed-mini-item" style="background:#6B0F24;"></div>
-                            <div class="feed-mini-item" style="background:#D6D2C4;"></div>
-                            <div class="feed-mini-item"><img src="foto-michelle.jpg" alt="Mesoestetic" onerror="this.style.display='none'"></div>
-                            <div class="feed-mini-item" style="background:#222;"></div>
+                        <div class="feed-mini-grid" style="grid-template-columns: 1fr;">
+                            <div class="feed-mini-item" style="aspect-ratio: 4 / 3;">
+                                <img src="feed-mesoestetic.jpg" alt="Mesoestetic Planificación" onerror="this.style.display='none'">
+                            </div>
                         </div>
                         <h3 class="serif-title feed-title">Mesoestetic</h3>
                         <p class="feed-desc">Planificación en Notion con enfoque en estética médica, carruseles educativos sobre activos dermocosméticos y diagramación limpia de tono clínico.</p>
                     </div>
 
+                    <!-- ORANGE STORE -->
                     <div class="feed-card">
-                        <div class="feed-mini-grid">
-                            <div class="feed-mini-item"><img src="portada-video2.jpg" alt="Orange Store" onerror="this.style.display='none'"></div>
-                            <div class="feed-mini-item" style="background:#222;"></div>
-                            <div class="feed-mini-item" style="background:#E55B13;"></div>
-                            <div class="feed-mini-item"><img src="portada-video3.jpg" alt="Orange Store" onerror="this.style.display='none'"></div>
-                            <div class="feed-mini-item" style="background:#121212;"></div>
-                            <div class="feed-mini-item" style="background:#6B0F24;"></div>
+                        <div class="feed-mini-grid" style="grid-template-columns: 1fr;">
+                            <div class="feed-mini-item" style="aspect-ratio: 4 / 3;">
+                                <img src="feed-orange.jpg" alt="Orange Store Planificación" onerror="this.style.display='none'">
+                            </div>
                         </div>
                         <h3 class="serif-title feed-title">Orange Store</h3>
                         <p class="feed-desc">Lanzamientos tech con estética dinámica y juvenil, fotografías de producto Apple en alta resolución y contenido visual orientado a ofertas Trade-in.</p>
                     </div>
 
+                    <!-- CELLSKINLAB -->
                     <div class="feed-card">
-                        <div class="feed-mini-grid">
-                            <div class="feed-mini-item"><img src="portada-video1.jpg" alt="CellSkinLab" onerror="this.style.display='none'"></div>
-                            <div class="feed-mini-item" style="background:#E8E4DC;"></div>
-                            <div class="feed-mini-item" style="background:#6B0F24;"></div>
-                            <div class="feed-mini-item"><img src="portada-video1.jpg" alt="CellSkinLab" onerror="this.style.display='none'"></div>
-                            <div class="feed-mini-item" style="background:#D6D2C4;"></div>
-                            <div class="feed-mini-item" style="background:#8C1C35;"></div>
+                        <div class="feed-mini-grid" style="grid-template-columns: 1fr;">
+                            <div class="feed-mini-item" style="aspect-ratio: 4 / 3;">
+                                <img src="feed-cellskin.jpg" alt="CellSkinLab Planificación" onerror="this.style.display='none'">
+                            </div>
                         </div>
                         <h3 class="serif-title feed-title">CellSkinLab</h3>
                         <p class="feed-desc">Curaduría de estilo Clean Beauty, tonos neutros y suaves, demostración de texturas de sueros y guías paso a paso para rutinas de cuidado facial.</p>
                     </div>
 
+                    <!-- FALABELLA -->
                     <div class="feed-card">
-                        <div class="feed-mini-grid">
-                            <div class="feed-mini-item"><img src="portada-video4.jpg" alt="Falabella" onerror="this.style.display='none'"></div>
-                            <div class="feed-mini-item" style="background:#333333;"></div>
-                            <div class="feed-mini-item" style="background:#1A1A1A;"></div>
-                            <div class="feed-mini-item"><img src="portada-video4.jpg" alt="Falabella" onerror="this.style.display='none'"></div>
-                            <div class="feed-mini-item" style="background:#8C1C35;"></div>
-                            <div class="feed-mini-item" style="background:#222222;"></div>
+                        <div class="feed-mini-grid" style="grid-template-columns: 1fr;">
+                            <div class="feed-mini-item" style="aspect-ratio: 4 / 3;">
+                                <img src="feed-falabella.jpg" alt="Falabella Planificación" onerror="this.style.display='none'">
+                            </div>
                         </div>
                         <h3 class="serif-title feed-title">Falabella</h3>
                         <p class="feed-desc">Contenido UGC orientado a tendencias de moda y vestuario, colaboraciones con creadoras de contenido y lookbooks visuales estacionales.</p>
@@ -1379,7 +1453,7 @@
                 img1: 'portada-video1.jpg',
                 img2: 'portada-video2.jpg',
                 img3: 'portada-video3.jpg',
-                footerImg: 'foto-michelle.jpg', /* Aquí puedes cambiar la imagen del fondo */
+                footerImg: 'foto-michelle.jpg',
                 desc1: 'Producción presencial y ejecución de lanzamientos corporativos diseñados para conectar el mundo físico con la captación digital. Este caso detalla cómo se estructuraron experiencias inmersivas para los asistentes, maximizando la interacción directa con la marca en puntos clave de exhibición.',
                 desc2: 'Mediante la integración de códigos QR situados estratégicamente en el recinto, flujos de captura de leads en tiempo real y campañas de remarketing posterior, logramos un incremento masivo en la base de datos de prospectos calificados y un engagement orgánico sin precedentes.',
                 stat1: '+3,722%', statLabel1: 'Aumento de Alcance Total',
