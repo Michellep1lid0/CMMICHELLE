@@ -482,7 +482,7 @@
         <p class="hero-subtitle">Community Management & Trade Marketing Specialist | Estrategias de contenido, copywriting de respuesta directa y crecimiento orgánico para marcas líderes en Latam.</p>
         
         <div class="arch-frame-container">
-            <img src="foto-michelle.jpeg" alt="Michelle Pulido" class="arch-frame-img" onerror="this.style.display='none'">
+            <img src="foto-michelle.jpeg" alt="Michelle Pulido" class="arch-frame-img">
         </div>
     </header>
 
@@ -583,7 +583,7 @@
                     <div class="feed-card">
                         <div class="feed-mini-grid">
                             <div class="feed-mini-item">
-                                <img src="planificacion-mesoestetic.jpg" alt="Mesoestetic Planificación" onerror="this.style.display='none'">
+                                <img src="planificacion-mesoestetic.jpg" alt="Mesoestetic Planificación">
                             </div>
                         </div>
                         <h3 class="serif-title feed-title">Mesoestetic</h3>
@@ -594,21 +594,21 @@
                     <div class="feed-card">
                         <div class="feed-mini-grid">
                             <div class="feed-mini-item">
-                                <img src="planificacion-cellskin.jpg" alt="CellSkinLab Planificación" onerror="this.style.display='none'">
+                                <img src="planificacion-cellskin.jpg" alt="CellSkinLab Planificación">
                             </div>
                         </div>
                         <h3 class="serif-title feed-title">CellSkinLab</h3>
                         <p class="feed-desc">Curaduría de estilo Clean Beauty, tonos neutros y suaves, demostración de texturas de sueros y guías paso a paso para rutinas faciales.</p>
                     </div>
 
-                    <!-- NARANJA -->
+                    <!-- ORANGE STORE -->
                     <div class="feed-card">
                         <div class="feed-mini-grid">
                             <div class="feed-mini-item">
-                                <img src="planificacion-naranja.jpg" alt="Estrategia Naranja" onerror="this.style.display='none'">
+                                <img src="planificacion-orange.jpg" alt="Orange Store Planificación">
                             </div>
                         </div>
-                        <h3 class="serif-title feed-title">Estrategia Naranja</h3>
+                        <h3 class="serif-title feed-title">Orange Store</h3>
                         <p class="feed-desc">Estructuración de pilares de contenido, infografías de valor comercial y optimización de flujos de conversión en redes sociales.</p>
                     </div>
 
@@ -616,7 +616,7 @@
                     <div class="feed-card">
                         <div class="feed-mini-grid">
                             <div class="feed-mini-item">
-                                <img src="planificacion-falabella.jpg" alt="Falabella Planificación" onerror="this.style.display='none'">
+                                <img src="planificacion-falabella.jpg" alt="Falabella Planificación">
                             </div>
                         </div>
                         <h3 class="serif-title feed-title">Falabella</h3>
@@ -685,4 +685,19 @@
 
         function openBrandModal(brandName) {
             document.getElementById('modalTitle').innerText = brandName;
-            document.getElementById('modalDescription
+            document.getElementById('modalDescription').innerText = brandData[brandName] || 'Estrategia integral de marketing y contenidos desarrollada para potenciar la presencia digital de la marca.';
+            document.getElementById('brandModal').classList.add('active');
+        }
+
+        function closeBrandModal(event) {
+            if (event.target.id === 'brandModal') {
+                document.getElementById('brandModal').classList.remove('active');
+            }
+        }
+
+        function closeBrandModalDirect() {
+            document.getElementById('brandModal').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
