@@ -208,6 +208,51 @@
             font-size: 0.8rem;
         }
 
+        /* STACK TECNOLÓGICO Y HABILIDADES */
+        .stack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .stack-box {
+            background: var(--blanco-puro);
+            border: 1px solid var(--gris-borde);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.03);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .stack-box:hover {
+            transform: translateY(-5px);
+            border-color: var(--vinotinto);
+        }
+
+        .stack-box h4 {
+            font-size: 1.1rem;
+            color: var(--vinotinto);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--gris-suave);
+            padding-bottom: 8px;
+        }
+
+        .stack-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .stack-pill {
+            background: var(--crema-fondo);
+            border: 1px solid var(--gris-borde);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: var(--texto-oscuro);
+        }
+
         /* MARCAS INTERACTIVAS */
         .brands-grid {
             display: grid;
@@ -482,7 +527,7 @@
         <p class="hero-subtitle">Community Management & Trade Marketing Specialist | Estrategias de contenido, copywriting de respuesta directa y crecimiento orgánico para marcas líderes en Latam.</p>
         
         <div class="arch-frame-container">
-            <img src="foto-michelle.jpeg" alt="Michelle Pulido" class="arch-frame-img">
+            <img src="foto-perfil.jpg" alt="Michelle Pulido" class="arch-frame-img">
         </div>
     </header>
 
@@ -513,6 +558,56 @@
                             <li><strong>Diplomado en Community Manager</strong> con enfoque en estrategias de crecimiento orgánico y pauta.</li>
                             <li>Capacitación especializada dominical en <strong>Diseño Gráfico para Redes Sociales</strong>.</li>
                         </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HABILIDADES & STACK DE HERRAMIENTAS -->
+            <section class="visible">
+                <div class="section-header">
+                    <p>Dominio Técnico & Operativo</p>
+                    <h2 class="serif-title">Habilidades & Herramientas</h2>
+                </div>
+
+                <div class="stack-grid">
+                    <div class="stack-box">
+                        <h4>Community Management</h4>
+                        <div class="stack-pills">
+                            <span class="stack-pill">Metricool</span>
+                            <span class="stack-pill">Notion</span>
+                            <span class="stack-pill">Copywriting</span>
+                            <span class="stack-pill">Calendarios Editoriales</span>
+                        </div>
+                    </div>
+
+                    <div class="stack-box">
+                        <h4>Edición & Multimedia</h4>
+                        <div class="stack-pills">
+                            <span class="stack-pill">CapCut</span>
+                            <span class="stack-pill">Adobe Premiere</span>
+                            <span class="stack-pill">Diseño Gráfico</span>
+                            <span class="stack-pill">Reels & TikToks</span>
+                        </div>
+                    </div>
+
+                    <div class="stack-box">
+                        <h4>Programación & Web</h4>
+                        <div class="stack-pills">
+                            <span class="stack-pill">HTML5 / CSS3</span>
+                            <span class="stack-pill">JavaScript</span>
+                            <span class="stack-pill">GitHub Pages</span>
+                            <span class="stack-pill">WordPress</span>
+                        </div>
+                    </div>
+
+                    <div class="stack-box">
+                        <h4>Automatización & Datos</h4>
+                        <div class="stack-pills">
+                            <span class="stack-pill">Google Apps Script</span>
+                            <span class="stack-pill">Google Sheets</span>
+                            <span class="stack-pill">Reportes de KPIs</span>
+                            <span class="stack-pill">Formularios</span>
+                        </div>
                     </div>
                 </div>
             </section>
